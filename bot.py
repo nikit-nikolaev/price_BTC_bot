@@ -9,7 +9,7 @@ with open('token.txt', 'r', encoding='utf-8') as f:
 logging.basicConfig(level=logging.INFO)
 bot_token = Bot(token=token_bot)
 dp = Dispatcher()
-# text_price = (f"Отлично! Цена Bitcoin составляет: \n**{price_BTC_rub()}**₽ рублей. \n**{price_BTC_usd()}**$ долларов.", parse_mode="Markdown")
+
 @dp.message(Command("start"))
 async def async_start(message:types.Message):
     await message.answer("Здравствуйте! Данный бот создан для того, чтобы предоставлять информацию о курсе Bitcoin. Для того чтобы узнать текущий курс, используйте команду /price.")
